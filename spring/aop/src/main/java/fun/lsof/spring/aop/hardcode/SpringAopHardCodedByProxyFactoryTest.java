@@ -1,17 +1,18 @@
-package fun.lsof.spring.aop.config4xml;
+package fun.lsof.spring.aop.hardcode;
 
 import fun.lsof.spring.aop.config4xml.advice.MethodAdvice;
 import fun.lsof.spring.aop.common.BookShopService;
 import org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor;
-import org.springframework.aop.framework.ProxyFactoryBean;
+import org.springframework.aop.framework.ProxyFactory;
+
 
 /**
- * 使用硬编码的方式来实现AOP（ProxyFactoryBean）.
+ * 使用硬编码的方式来实现AOP（ProxyFactory）.
  *
  * @author jerry
- * @date 2020 -03-28 13:57:31
+ * @date 2020 -03-28 13:57:05
  */
-public class SpringAopHardCodedByProxyFactoryBeanTest {
+public class SpringAopHardCodedByProxyFactoryTest {
 
 
     public static void print(BookShopService bean) {
@@ -23,8 +24,8 @@ public class SpringAopHardCodedByProxyFactoryBeanTest {
     }
 
 
-    public static void useAdvisor() {
-        ProxyFactoryBean factoryBean = new ProxyFactoryBean();
+    public static void useAdvisor(){
+        ProxyFactory factoryBean = new ProxyFactory();
 
         //设置代理对象
         factoryBean.setTarget(new BookShopService());
@@ -36,12 +37,12 @@ public class SpringAopHardCodedByProxyFactoryBeanTest {
 
         factoryBean.addAdvisor(pointcutAdvisor);
 
-        BookShopService bean2 = (BookShopService) factoryBean.getObject();
+        BookShopService bean2 = (BookShopService) factoryBean.getProxy();
         print(bean2);
     }
 
-    public static void proxyAllMethod() {
-        ProxyFactoryBean factoryBean = new ProxyFactoryBean();
+    public static void proxyAllMethod(){
+        ProxyFactory factoryBean = new ProxyFactory();
 
         //设置代理对象
         factoryBean.setTarget(new BookShopService());
@@ -49,7 +50,7 @@ public class SpringAopHardCodedByProxyFactoryBeanTest {
         //直接可以设置监听所有执行的方法
         factoryBean.addAdvice(new MethodAdvice());
 
-        BookShopService bean2 = (BookShopService) factoryBean.getObject();
+        BookShopService bean2 = (BookShopService) factoryBean.getProxy();
         print(bean2);
     }
 
@@ -58,5 +59,6 @@ public class SpringAopHardCodedByProxyFactoryBeanTest {
         useAdvisor();
         proxyAllMethod();
     }
+
 
 }
