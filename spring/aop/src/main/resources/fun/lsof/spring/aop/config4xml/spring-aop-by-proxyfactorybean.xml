@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 定义需要AOP 代理的类   -->
+    <bean id="bookShopService" class="fun.lsof.spring.aop.common.BookShopService"/>
+
+    <!-- 自定义方法切面   -->
+    <bean id="methodAdvice" name="allAspect" class="fun.lsof.spring.aop.config4xml.advice.MethodAdvice"></bean>
+
+    <!-- 使用 proxyFactoryBean 来实现代理   -->
+    <bean  id="factoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="targetName" value="bookShopService"></property>
+        <property name="interceptorNames" value="methodAdvice"></property>
+    </bean>
+
+
+</beans>
+
