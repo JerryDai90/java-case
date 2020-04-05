@@ -35,7 +35,10 @@ public class SpringAopHardCodedByProxyFactoryTest {
         pointcutAdvisor.setExpression("execution(* *.delete*()) or execution(* *.update*())");
         pointcutAdvisor.setAdvice(new MethodAdvice());
 
+
         factoryBean.addAdvisor(pointcutAdvisor);
+
+
 
         BookShopService bean2 = (BookShopService) factoryBean.getProxy();
         print(bean2);
