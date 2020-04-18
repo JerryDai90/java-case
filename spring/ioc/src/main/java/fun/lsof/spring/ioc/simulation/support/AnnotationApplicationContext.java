@@ -1,6 +1,8 @@
 package fun.lsof.spring.ioc.simulation.support;
 
 import fun.lsof.spring.ioc.simulation.annotation.Autowired;
+import fun.lsof.spring.ioc.simulation.annotation.Component;
+import fun.lsof.spring.ioc.simulation.exception.ComponentNotFundException;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
@@ -81,6 +83,11 @@ public class AnnotationApplicationContext {
     }
 
 
+    private static boolean hasComponent(Class clazz){
+        return clazz.getAnnotationsByType(Component.class).length != 0;
+    }
+
+
     /**
      * 获取对象实例.
      */
@@ -100,6 +107,11 @@ public class AnnotationApplicationContext {
 
             Class<?> aClass = Class.forName(name);
             Object obj = null;
+
+
+            if( !hasComponent(aClass) ){
+                throw new ComponentNotFundException("@Component not find in "+aClass.getName());
+            }
 
             //优先判断构造函数
             if (hasConstructorAutowired(aClass)) {
