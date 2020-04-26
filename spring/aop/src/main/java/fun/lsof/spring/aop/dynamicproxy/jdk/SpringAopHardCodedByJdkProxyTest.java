@@ -4,6 +4,13 @@ import fun.lsof.spring.aop.common.BookShopService;
 import fun.lsof.spring.aop.config4xml.advice.MethodAdvice;
 import org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor;
 import org.springframework.aop.framework.ProxyFactory;
+import sun.misc.ProxyGenerator;
+
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.net.URL;
 
 
 /**
@@ -37,7 +44,7 @@ public class SpringAopHardCodedByJdkProxyTest {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         useAdvisor();
     }
 
