@@ -29,7 +29,7 @@ public class ProxyFactory implements InvocationHandler {
 
     private MethodAdvice advice;
 
-    private AtomicInteger count = new AtomicInteger();
+    private static AtomicInteger count = new AtomicInteger();
 
 
     public void setTarget(Object target) {
@@ -57,6 +57,17 @@ public class ProxyFactory implements InvocationHandler {
 
 
     public <T> T getProxy() throws Exception {
+        if( null == target ){
+            throw new RuntimeException("target can not be null!");
+        }
+        if( null == clazz ){
+            throw new RuntimeException("clazz can not be null!");
+        }
+        if( null == advice ){
+            throw new RuntimeException("advice can not be null!");
+        }
+
+
         String proxyClassStr = "com.proxy.Proxy" + count.addAndGet(1);
 
         //动态生成Class 文件
