@@ -20,7 +20,7 @@ public class ProxyFactoryTest {
 
         ProxyFactory proxyFactory = new ProxyFactory();
 
-        proxyFactory.setInterfaces(ICar.class, InvocationHandler.class);
+        proxyFactory.setInterfaces(ICar.class);
         proxyFactory.setTarget(new Bus());
 
         proxyFactory.setAdvice(new MethodAdvice() {
