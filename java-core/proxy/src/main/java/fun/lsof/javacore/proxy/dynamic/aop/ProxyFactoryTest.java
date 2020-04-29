@@ -16,8 +16,7 @@ import java.lang.reflect.Method;
 public class ProxyFactoryTest {
 
 
-    public static void main(String[] args) throws Exception {
-
+    public static void test() {
         ProxyFactory proxyFactory = new ProxyFactory();
 
         proxyFactory.setInterfaces(ICar.class);
@@ -35,11 +34,21 @@ public class ProxyFactoryTest {
             }
         });
 
-        ICar proxy = proxyFactory.getProxy();
+        ICar proxy = null;
+        try {
+            proxy = proxyFactory.getProxy();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         proxy.start();
         proxy.run();
         proxy.stop();
+    }
+
+
+    public static void main(String[] args) throws Exception {
+        test();
     }
 
 }
