@@ -4,6 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
        http://lsof.fun/schema/config http://lsof.fun/schema/config/custom-config.xsd">
 
-    <custom:config id="test1" name="test" ip="192.168.0.0.1" port="8080" path="test"/>
+    <custom:config id="test1" name="test" ip="192.168.0.0.1" port="8080" path="/web"/>
 
 </beans>

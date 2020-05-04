@@ -1,11 +1,13 @@
 package fun.lsof.spring.xml;
 
 import fun.lsof.spring.xml.vo.Config;
+import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class CustomXmlDefinitionParserTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-config.xml");
 
@@ -13,5 +15,4 @@ public class CustomXmlDefinitionParserTest {
 
         System.out.println(bean);
     }
-
 }

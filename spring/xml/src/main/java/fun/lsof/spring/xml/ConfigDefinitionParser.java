@@ -5,6 +5,12 @@ import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.w3c.dom.Element;
 
+/**
+ * 具体解析xml类.
+ *
+ * @author jerry
+ * @date 2020 -05-04 21:39:53
+ */
 public class ConfigDefinitionParser extends AbstractSingleBeanDefinitionParser {
 
     private String getAttribute(Element element, String attr) {

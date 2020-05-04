@@ -29,4 +29,13 @@ public class Config {
     public void setPath(String path) {
         this.path = path;
     }
+
+    @Override
+    public String toString() {
+        return "Config{" +
+                "ip='" + ip + '\'' +
+                ", port='" + port + '\'' +
+                ", path='" + path + '\'' +
+                '}';
+    }
 }
