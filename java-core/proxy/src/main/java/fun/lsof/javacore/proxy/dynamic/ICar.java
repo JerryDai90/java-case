@@ -7,7 +7,6 @@ public interface ICar {
     void run();
 
     void stop();
-
 }
 
 

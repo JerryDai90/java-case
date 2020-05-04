@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:custom="http://lsof.fun/schema/config"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://lsof.fun/schema/config http://lsof.fun/schema/config/custom-config.xsd">
+
+    <custom:config id="test1" name="test" ip="192.168.0.0.1" port="8080" path="test"/>
+
+</beans>
