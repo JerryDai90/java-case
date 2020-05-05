@@ -22,6 +22,6 @@
 
 ### 2.3 xml
 
-* [fun.lsof.spring.xml.extension](https://github.com/JerryDai90/java-case/tree/master/spring/xml-extension/src/main/java/fun/lsof/spring/xml/extension)：扩展xml解析范例
+* [fun.lsof.spring.xml.extension](https://github.com/JerryDai90/java-case/tree/master/spring/xml-extension)：扩展xml解析范例
 
 
