@@ -1,6 +1,6 @@
-package fun.lsof.spring.xml;
+package fun.lsof.spring.xml.extension;
 
-import fun.lsof.spring.xml.vo.Config;
+import fun.lsof.spring.xml.extension.vo.Config;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.w3c.dom.Element;

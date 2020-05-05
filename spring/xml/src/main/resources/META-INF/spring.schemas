@@ -1,1 +1,1 @@
-http\://lsof.fun/schema/config/custom-config.xsd=fun/lsof/spring/xml/custom-config.xsd
+http\://lsof.fun/schema/config/custom-config.xsd=/fun/lsof/spring/xml/extension/custom-config.xsd

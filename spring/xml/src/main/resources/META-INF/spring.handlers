@@ -1,1 +1,1 @@
-http\://lsof.fun/schema/config=fun.lsof.spring.xml.ConfigNamespaceHandlerSupport
+http\://lsof.fun/schema/config=fun.lsof.spring.xml.extension.ConfigNamespaceHandlerSupport

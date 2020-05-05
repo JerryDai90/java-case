@@ -5,6 +5,7 @@ public class Chrome implements IBrowser {
     @Override
     public void visitInternet() {
         System.out.println("visitInternet");
+        saveFile();
     }
 
     @Override

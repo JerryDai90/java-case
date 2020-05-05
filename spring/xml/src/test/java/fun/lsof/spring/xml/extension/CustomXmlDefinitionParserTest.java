@@ -1,6 +1,6 @@
-package fun.lsof.spring.xml;
+package fun.lsof.spring.xml.extension;
 
-import fun.lsof.spring.xml.vo.Config;
+import fun.lsof.spring.xml.extension.vo.Config;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

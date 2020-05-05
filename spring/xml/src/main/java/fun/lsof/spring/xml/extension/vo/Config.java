@@ -1,4 +1,4 @@
-package fun.lsof.spring.xml.vo;
+package fun.lsof.spring.xml.extension.vo;
 
 public class Config {
 

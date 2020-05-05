@@ -1,6 +1,5 @@
-package fun.lsof.spring.xml;
+package fun.lsof.spring.xml.extension;
 
-import org.springframework.beans.factory.xml.BeanDefinitionDecorator;
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 
 /**
