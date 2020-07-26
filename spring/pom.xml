@@ -12,6 +12,8 @@
         <module>aop</module>
         <module>ioc</module>
         <module>xml-extension</module>
+        <module>tx</module>
+        <module>tx-test</module>
     </modules>
 
     <properties>
@@ -54,6 +56,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
     </dependencies>

@@ -1,4 +1,4 @@
-package fun.lsof.spring.aop.dynamicproxy.jdk;
+package fun.lsof.spring.aop.common;
 
 public class Chrome implements IBrowser {
 
